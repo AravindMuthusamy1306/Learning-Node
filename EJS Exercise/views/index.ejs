@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Exercise 1</title>
+</head>
+<body>
+    <h1><%- title %></h1>
+    <p>Current Seconds: <%= seconds %></p>
+    
+    <% if (seconds%2 == 0) { %>
+        <% for( let i = 0; i < item.length; i++ ) { %>
+            <ul>
+                <li><%= item[i] %></li>
+            </ul>
+        <% } %>
+    <% } else{ %>
+        <p>No item to show</p>
+    <% } %>
+
+    <%- htmlContent %>
+    <%- include('footer.ejs') %>
+</body>
+</html>
