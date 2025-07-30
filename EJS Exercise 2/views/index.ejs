@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Counter</title>
+</head>
+<body>
+    <h1>Welcome to the Name Counter</h1>
+    <p>Enter your first and last name below:</p>
+    <form action="/submit" method="post">
+        <input type = "text" name = "fname" placeholder = "First Name">
+        <input type = "text" name = "lname" placeholder = "Last Name">
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+    <% if (!fname && !lname) { %>
+        <h1>No Names entered</h1>
+    <% } else if (fname || lname) { %>
+        <h1><%= fname.length + lname.length %> characters in total</h1>
+    <% } %>
+</body>
+</html>
